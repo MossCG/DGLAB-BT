@@ -5,6 +5,14 @@ Java在Windows下的BLE开发真TM气人！
 - 逐行输入，一行为一个指令
 - 逐行输出，一行为一条消息
 
+# 参考操作
+
+- scan
+- connect xx:xx:xx:xx:xx:xx
+- getBattery
+- setStrength 0 10
+- sendWave 5 135 20
+
 # 输出
 ## msg
 - 输出描述：消息
@@ -29,6 +37,9 @@ Java在Windows下的BLE开发真TM气人！
 ## setStrength
 - 操作描述：设置强度
 - 输入格式：setStrength A通道强度 B通道强度
+## sendWave
+- 操作描述：发送波形
+- 输入格式：sendWave A/B x y z 
 
 # 事件
 ## start
