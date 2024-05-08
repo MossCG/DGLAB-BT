@@ -64,3 +64,6 @@ Java在Windows下的BLE开发真TM气人！
 ## updateStrength
 - 事件描述：强度更新
 - 输出格式：event updateStrength A通道强度 B通道强度
+## updateWave
+- 事件描述：波形更新
+- 输出格式：event updateWave A通道强度 B通道强度
