@@ -3,7 +3,6 @@ import BasicIO
 
 
 async def sendWave(channel, x, y, z):
-    channelUUID = None
     if channel == "A":
         channelUUID = "955A1505-0FE2-F5AA-A094-84B8D4F3E8AD"
     else:
