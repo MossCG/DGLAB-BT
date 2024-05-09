@@ -16,11 +16,21 @@
 # 调用方式
 ## Python
 - 都用Python了，你直接扒拉我代码就行
+- 每个文件的功能都是写在文件名上的，一眼就能看懂
 ## Java（及其他平台）
 - 仅供参考喵
-- 具体代码不写了因为咱懒
 - 反正就是用Process调该项目构建出来的exe文件
-- 参考下面输入输出就行了
+- 参考下面输入输出就行了，反正就是简单的字符串处理
+```
+Process process = new ProcessBuilder("./DGLABOI/libs/DGLAB-BT-EXE.exe").start();
+BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(process.getOutputStream());
+BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+writer.write("your command");
+while (true) {
+    String output = reader.readLine();
+    System.out.println(output);
+}
+```
 * * *
 
 # 读写方案

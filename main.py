@@ -19,7 +19,7 @@ from Command.Command_SendWave import cmd_sendWave
 # 主类
 async def main():
     BasicData.init()
-    output_command("msg", "DGLAB蓝牙核心已启动！")
+    output_command("msg", "DGLAB蓝牙核心V"+BasicData.version+"已启动！By "+BasicData.author)
     output_command("event", "start")
     while 1 == 1:
         cmd = input_command()[0]
