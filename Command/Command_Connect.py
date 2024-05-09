@@ -17,7 +17,7 @@ async def cmd_connect(address):
                 BasicIO.output_command("event", "deviceVersion 2")
                 BasicData.deviceVersion = 2
             if service.uuid == "0000180c-0000-1000-8000-00805f9b34fb":
-                BasicIO.output_command("event", "deviceVersion 2")
+                BasicIO.output_command("event", "deviceVersion 3")
                 BasicData.deviceVersion = 3
         if BasicData.deviceVersion is None:
             await BasicData.client.disconnect()
