@@ -1,4 +1,5 @@
 import asyncio
+import msvcrt
 from threading import Thread
 
 import BasicData
@@ -19,15 +20,17 @@ from Command.Command_SendWave import cmd_sendWave
 # 主类
 async def main():
     BasicData.init()
-    output_command("msg", "DGLAB蓝牙核心V"+BasicData.version+"已启动！By "+BasicData.author)
+    output_command("msg", "DGLAB蓝牙核心V" + BasicData.version + "已启动！By " + BasicData.author)
     output_command("event", "start")
-    while 1 == 1:
-        cmd = input_command()[0]
+    while True:
+        cmd = sys.stdin.readline().strip()
+        if not cmd:
+            break
         Thread(target=read_Command, args=(cmd,)).start()
 
 
 def read_Command(cmd):
-    if len(cmd) <= 0:
+    if len(cmd) < 1:
         return
     key = cmd.split()
     # 指令模块
