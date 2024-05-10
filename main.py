@@ -1,5 +1,4 @@
 import asyncio
-import msvcrt
 from threading import Thread
 
 import BasicData
